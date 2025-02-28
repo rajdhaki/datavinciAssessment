@@ -67,13 +67,13 @@ document.addEventListener("DOMContentLoaded", function () {
             previewsContainer.appendChild(preview);
         });
 
-        const googleRating = document.createElement('div');
+
   
 
         // Assemble carousel components
         carouselContainer.appendChild(carouselMain);
         carouselContainer.appendChild(previewsContainer);
-        carouselContainer.appendChild(googleRating);
+
 
         // Insert carousel before content
         const content = document.querySelector('.content');
@@ -104,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         prevButton.addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + images.length) % images.length;
+            console.log(currentIndex);
             updateMainImage(currentIndex);
         });
 
